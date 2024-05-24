@@ -1,4 +1,3 @@
-
 import pytest
 from stat_funcs import StatsN2
 
