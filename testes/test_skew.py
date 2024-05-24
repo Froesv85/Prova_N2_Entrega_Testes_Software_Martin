@@ -18,3 +18,7 @@ def stats_instance():
 def test_skew(stats_instance, lista, expected):
     assert stats_instance.skew(lista) == expected
 
+@pytest.mark.xfail
+def test_xskew(stats_instance, lista_de_numeros):
+    assert stats_instance.skew(lista_de_numeros) == "NDistribuição negativa"
+

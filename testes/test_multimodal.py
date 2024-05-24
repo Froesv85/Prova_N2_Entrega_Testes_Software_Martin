@@ -15,3 +15,7 @@ def stats_instance():
 ])
 def test_multimodal(stats_instance, lista, expected):
     assert stats_instance.multimodal(lista) == expected
+
+@pytest.mark.xfail
+def test_xmultimodal(stats_instance, numeros_multimodal):
+    assert stats_instance.mulimodal(numeros_multimodal) == "Não é multimodal"
