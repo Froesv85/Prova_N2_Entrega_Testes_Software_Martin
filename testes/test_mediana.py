@@ -17,3 +17,6 @@ def stats_instance():
 ])
 def test_mediana(stats_instance, lista, expected):
     assert stats_instance.mediana(lista) == expected
+@pytest.mark.xfail
+def test_xmediana(stats_instance, lista_de_numeros):
+    assert stats_instance.mediana(lista_de_numeros) == 5
